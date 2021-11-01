@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9_생산-상태창</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="css/fiber_ERP_9_produce.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <section>
+        <div id="main">
+          <div class="box_title">
+            <h3>상태창</h3>
+            <div class="diagram_wrap">
+              <div class="diagram">?</div>
+              <div class="diagram"><i class="far fa-star"></i></div>
+              <div class="diagram">X</div>
+            </div>
+          </div>
+
+          <div class="top_container">
+            <div class="number_box">
+              <table>
+                <tr>
+                  <th>호기 No</th>
+                  <td>12<i class="fas fa-caret-down"></i></td>
+                </tr>
+              </table>
+            </div>
+            <div class="state_box">
+              <h1><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i>제직중</h1>
+            </div>
+            <div class="yd_table">
+              <table>
+                <tr>
+                  <th>작업가능수량(일)</th>
+                  <th>현재길이</th>
+                  <th>분절길이</th>
+                </tr>
+                <tr>
+                  <td>32 yd</td>
+                  <td>15 yd</td>
+                  <td>55 yd</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="img_box">
+            <div class="user_img"><img src="img/person.jfif"></div>
+            <button onclick="location.href='fiber_ERP_1_login.html'">로그인</button>
+            <button><i class="fas fa-square-full"></i></button>
+          </div>
+
+          <div class="img_box2">
+            <div class="fiber_img"><img src="img/fiber.jfif"></div>
+            <button>상세정보</button>
+            <button><i class="fas fa-search"></i></button>
+          </div>
+
+          <div class="work_table_wrap">
+            <table>
+              <tr>
+                <th>호기그룹</th>
+                <th>옵션명</th>
+                <th>HOOK</th>
+                <th>RPM</th>
+                <th>효률(%)</th>
+                <th>년식</th>
+                <th>Width Capacity</th>
+                <th>단위</th>
+                <th>Beam Layer</th>
+              </tr>
+              <tr>
+                <td><a href="#">자카드</a></td>
+                <td><a href="#">폭 54.5 inch</a></td>
+                <td><a href="#">2400</a></td>
+                <td><a href="#">460</a></td>
+                <td><a href="#">80</a></td>
+                <td><a href="#">1998</a></td>
+                <td><a href="#">1900</a></td>
+                <td><a href="#">mm</a></td>
+                <td><a href="#">1</a></td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <th>발주번호</th>
+                <th>상품명</th>
+                <th>색상명</th>
+                <th>배색</th>
+                <th><b>빔 수량</b></th>
+                <th><b>남은 작업량</b></th>
+                <th><b>허용로스</b></th>
+              </tr>
+              <tr>
+                <td>2020-11143352</td>
+                <td>KP-015B</td>
+                <td>C/#22,#24,#12</td>
+                <td>C/#B21+2+4+5</td>
+                <td><b>1,960 yd</b></td>
+                <td><b>460</b></td>
+                <td><b>5%</b></td>
+              </tr>
+            </table>
+
+            <div class="production_title">
+              <h3>생산2팀 유경님 현재 작업량</h3>
+            </div>
+
+            <table>
+              <tr>
+                <th>담당자</th>
+                <th>등록시간</th>
+                <th>시작시간</th>
+                <th>종료시간</th>
+                <th>작업시간</th>
+                <th class="black">예상작업량</th>
+                <th class="blue">생산량</th>
+                <th class="blue">로스</th>
+                <th class="red">현재량</th>
+                <th class="red">로스</th>
+                <th class="black">메모</th>
+              </tr>
+              <tr>
+                <td>&#32;</td>
+                <td>21-10-25</td>
+                <td>10-25.10:30</td>
+                <td>10-26.10:30</td>
+                <td>24</td>
+                <td>32</td>
+                <td class="skyblue">30</td>
+                <td class="skyblue">2</td>
+                <td class="pink">30</td>
+                <td class="pink">2</td>
+                <td>&#32;</td>
+              </tr>
+              <tr>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td class="skyblue">&#32;</td>
+                <td class="skyblue">&#32;</td>
+                <td class="pink">&#32;</td>
+                <td class="pink">&#32;</td>
+                <td>&#32;</td>
+              </tr>
+              <tr>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td class="skyblue">&#32;</td>
+                <td class="skyblue">&#32;</td>
+                <td class="pink">&#32;</td>
+                <td class="pink">&#32;</td>
+                <td>&#32;</td>
+              </tr>
+            </table>
+
+            <div class="work_button_wrap">
+              <button>확인요청</button>
+              <button>확인</button>
+              <button>확인</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>

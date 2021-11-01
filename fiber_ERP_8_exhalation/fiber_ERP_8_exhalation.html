@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8_호기관리</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="css/fiber_ERP_8_exhalation.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <div id="header_top">
+          <div class="title_wrap">
+            <p onclick="location.href='fiber_ERP_2_home.html'"><b>유경디자인</b><span>프리미엄서비스 이용중 (2021.02.22 ~ 2022.02.23)</span></p>
+          </div>
+          <div class="user_wrap">
+            <p>영업부 <b>홍길동(honggildong)</b>님 로그인 최종로그인 2020.10.24 14.23'</p>
+            <div class="button_wrap">
+              <button>내정보</button>
+              <button>로그아웃</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="header_middle">
+          <ul>
+            <li>회사관리</li>
+            <li>거래처</li>
+            <li onclick="location.href='fiber_ERP_6_status.html'">생산</li>
+            <li onclick="location.href='fiber_ERP_12_enrollment.html'">상품</li>
+            <li onclick="location.href='fiber_ERP_28_order.html'">발주</li>
+            <li>입출고</li>
+            <li>서류함</li>
+            <li>정산</li>
+            <li>통계</li>
+          </ul>
+          <button>환경설정</button>
+        </div>
+    </header>
+      
+    <section>
+        <nav>
+            <div id="nav_title"><h1>생산관리</h1></div>
+            <ul>
+                <li onclick="location.href='fiber_ERP_6_status.html'">수주(작업지시)현황</li>
+                <li>- 생산현황 상세</li>
+                <li>- 생산등록/수정 _popup</li>
+                <li>&#32;</li>
+                <li>- 장치관리</li>
+                <li>&#32;- 장치등록/수정</li>
+                <li>&#32;- 장치작업현황</li>
+                <li>&#32;</li>
+                <li onclick="location.href='fiber_ERP_8_exhalation.html'">- 호기관리-목록</li>
+                <li>&#32;- 호기등록/수정</li>
+                <li>&#32;- 상세-호기정보</li>
+                <li>&#32;- 상세-작업관리</li>
+                <li>&#32;- 상세-예약대기목록</li>
+                <li>- 상태창 로그인</li>
+                <li onclick="location.href='fiber_ERP_9_produce.html'">- 상태창</li>
+                <li>&#32;</li>
+                <li>일정표</li>
+                <li>-일정등록</li>
+                <li>-일간일정표</li>
+                <li>-주간일정표</li>
+                <li>-월간일정표</li>
+            </ul>
+        </nav>
+
+        <div id="main">
+          <div class="box_title">
+            <h3>호기관리 호기번호:A201</h3>
+            <div class="diagram_wrap">
+              <div class="diagram">?</div>
+              <div class="diagram"><i class="far fa-star"></i></div>
+              <div class="diagram">X</div>
+            </div>
+          </div>
+
+          <div class="tap_menu">
+              <ul>
+                <li>호기정보</li>
+                <li>작업관리</li>
+                <li>예약대기목록</li>
+              </ul>
+          </div>
+
+          <div class="button_area">
+            <button><i class="fas fa-save"></i>상태변경<i class="fas fa-caret-down"></i></button>
+            <button>H</button>
+            <button><i class="fas fa-print"></i>출력</button>
+          </div>
+
+          <div class="main_wrap">
+              <table>
+                <tr>
+                  <th><u>등록일시</u></th><td>&#32;</td>
+                  <th><u>등록자</u></th><td>&#32;</td>
+                  <th><u>관리자(정)</u></th><td>&#32;</td>
+                  <th><u>관리자(부)</u></th><td>&#32;</td><td>&#32;</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                    <th><u>일련번호</u></th><td>&#32;</td>
+                    <th><u>구분</u></th><td>&#32;</td>
+                    <th><u>분류</u></th><td>&#32;</td>
+                    <th><u>코드</u></th><td>&#32;</td>
+                    <th><u>호기그룹</u></th><td>&#32;</td>
+                    <th><u>관리번호</u></th><td>&#32;</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>구분</th>
+                  <th>호기번호</th>
+                  <th>호기사양</th>
+                  <th>옵션 (옵션사양)</th>
+                  <th>HOOK</th>
+                  <th>RPM</th>
+                  <th>호률(%)</th>
+                  <th>Min</th>
+                  <th>Max</th>
+                  <th>단위</th>
+                  <th>Beam Layer</th>
+                </tr>
+                <tr>
+                  <td>자카드</td>
+                  <td>1</td>
+                  <td>레오나드88-2001Y</td>
+                  <td>스토브리L 897-1986Y</td>
+                  <td>2400</td>
+                  <td>420</td>
+                  <td>80</td>
+                  <td>1900</td>
+                  <td>2800</td>
+                  <td>mm</td>
+                  <td>1</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                    <th>장치그룹명</th>
+                    <th>장치명</th>
+                    <th>HOOK (침수)</th>
+                    <th>REPEZT (가마)</th>
+                    <th>Heddle Frame (EA)</th>
+                    <th>Reed Count</th>
+                    <th>Yarn / Dent</th>
+                    <th>DSGN Warp</th>
+                    <th>SEL (변사)</th>
+                    <th>Total warp</th>
+                    <th>DESN Width</th>
+                    <th>Beam Width</th>
+                    <th>단위</th>
+                </tr>
+                <tr>
+                    <td>AA 14,400 순통</td>
+                    <td>K-202</td>
+                    <td>2400</td>
+                    <td>6</td>
+                    <td>&#32;</td>
+                    <td>44</td>
+                    <td>6</td>
+                    <td>14400</td>
+                    <td>72</td>
+                    <td>14,544</td>
+                    <td>54.55</td>
+                    <td>56</td>
+                    <td>인치</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>상대</th>
+                  <th>통경</th>
+                  <th>연경</th>
+                  <th>경승</th>
+                  <th>하대</th>
+                  <th>시작시간</th>
+                  <th>종료시간</th>
+                  <th>상태</th>
+                </tr>
+                <tr>
+                  <td>완료</td>
+                  <td>완료</td>
+                  <td>완료</td>
+                  <td>완료</td>
+                  <td>-</td>
+                  <td>21-10-15 12:30</td>
+                  <td>21-10-17 12:30</td>
+                  <td>완료</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>위치(업체명)</th>
+                  <th>등록일시</th>
+                  <th>업체명</th>
+                  <th>발주번호</th>
+                  <th>디자인번호</th>
+                  <th>작업수량</th>
+                  <th>빔코드1</th>
+                  <th>빔코드2</th>
+                  <th>빔코드3</th>
+                </tr>
+                <tr>
+                  <td>&#32;</td>
+                  <td>21-10-16</td>
+                  <td>유경 디자인</td>
+                  <td>21-LE-RR-B-01</td>
+                  <td>RR-00-1111</td>
+                  <td>380</td>
+                  <td>B-14400-AA</td>
+                  <td>&#32;</td>
+                  <td>&#32;</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>&#32;</th>
+                  <th>상품명</th>
+                  <th>색상명</th>
+                  <th>배색</th>
+                  <th>작업지시량</th>
+                  <th>허용로스</th>
+                  <th>작업량</th>
+                  <th>L099</th>
+                  <th>Net</th>
+                  <th>남은작업량</th>
+                  <th>종료예정일시</th>
+                  <th>상태</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>UP-1301<button>변경</button></td>
+                  <td>버건디</td>
+                  <td>C/#B42A+42A+33+235</td>
+                  <td>1,500yd</td>
+                  <td>5%</td>
+                  <td>80</td>
+                  <td>7</td>
+                  <td>73</td>
+                  <td>4,927</td>
+                  <td>21-11-26</td>
+                  <td>작업중</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>UP-1302</td>
+                    <td>블루</td>
+                    <td>C/#B42A+42A+33+235</td>
+                    <td>2,500yd</td>
+                    <td>5%</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2,927</td>
+                    <td>21-11-26</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>UP-1303</td>
+                    <td>인디핑크</td>
+                    <td>C/#B42A+42A+33+235</td>
+                    <td>4,500yd</td>
+                    <td>5%</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4,500</td>
+                    <td>21-11-26</td>
+                    <td>대기</td>
+                  </tr>
+              </table>
+
+              <button>상태창</button>
+              <button>호기별 상세 (전체)</button>
+              <button>생산현황 (상세)</button>
+              <button><i class="fas fa-caret-right"></i></button>
+              <button><i class="far fa-square"></i></button>
+              <button><i class="fas fa-square"></i></button>
+              <button><i class="fas fa-circle"></i></button>
+          </div>
+
+          <div class="button_area2">
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X닫기</button>
+            <button>H</button>
+
+            <button>디자인정보</button>
+            <button>빔정보</button>
+            <button>발주서출력</button>
+            <button>S/C 출력</button>
+          </div>
+        </div>
+    </section>
+    <footer>
+        <div class="button_area3">
+            <!-- <button>상태 <i class="fas fa-caret-down"></i></button>
+            <button><i class="fas fa-search"></i>검색</button>
+            <button>+ 추가</button>
+            <button><i class="fas fa-print"></i>출력</button>
+            <button>수정</button>
+            <button>X 삭제</button>
+            <button>H</button>
+            <button>+ 신규등록</button> -->
+
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X 닫기</button>
+            <button>수정</button>
+            <button>X 삭제</button>
+            <button>H</button>
+            <button>+ 신규</button>
+            <button><i class="fas fa-search"></i></button>
+        </div>
+      </footer>
+  </body>
+</html>
