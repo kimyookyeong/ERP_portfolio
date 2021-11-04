@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6_생산 현황</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="css/fiber_ERP_6_status.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+        <div id="header_top">
+          <div class="title_wrap">
+            <p onclick="location.href='fiber_ERP_2_home/fiber_ERP_2_home.html'"><b>유경디자인</b><span>프리미엄서비스 이용중 (2021.02.22 ~ 2022.02.23)</span></p>
+          </div>
+          <div class="user_wrap">
+            <p>영업부 <b>홍길동(honggildong)</b>님 로그인 최종로그인 2020.10.24 14.23'</p>
+            <div class="button_wrap">
+              <button>내정보</button>
+              <button>로그아웃</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="header_middle">
+          <ul>
+            <li>회사관리</li>
+            <li>거래처</li>
+            <li onclick="location.href='fiber_ERP_6_status/fiber_ERP_6_status.html'">생산</li>
+            <li onclick="location.href='fiber_ERP_12_enrollment/fiber_ERP_12_enrollment.html'">상품</li>
+            <li onclick="location.href='fiber_ERP_28_order/fiber_ERP_28_order.html'">발주</li>
+            <li>입출고</li>
+            <li>서류함</li>
+            <li>정산</li>
+            <li>통계</li>
+          </ul>
+          <button>환경설정</button>
+        </div>
+      </header>
+      
+      <section>
+        <nav>
+            <div id="nav_title"><h1>생산관리</h1></div>
+            <ul>
+              <li onclick="location.href='fiber_ERP_6_status/fiber_ERP_6_status.html'">수주(작업지시)현황</li>
+              <li>- 생산현황 상세</li>
+              <li>- 생산등록/수정 _popup</li>
+              <li>&#32;</li>
+              <li>- 장치관리</li>
+              <li>&#32;- 장치등록/수정</li>
+              <li>&#32;- 장치작업현황</li>
+              <li>&#32;</li>
+              <li onclick="location.href='fiber_ERP_8_exhalation/fiber_ERP_8_exhalation.html'">- 호기관리-목록</li>
+              <li>&#32;- 호기등록/수정</li>
+              <li>&#32;- 상세-호기정보</li>
+              <li>&#32;- 상세-작업관리</li>
+              <li>&#32;- 상세-예약대기목록</li>
+              <li>- 상태창 로그인</li>
+              <li onclick="location.href='fiber_ERP_9_produce/fiber_ERP_9_produce.html'">- 상태창</li>
+              <li>&#32;</li>
+              <li>일정표</li>
+              <li>-일정등록</li>
+              <li>-일간일정표</li>
+              <li>-주간일정표</li>
+              <li>-월간일정표</li>
+            </ul>
+        </nav>
+
+        <div id="main">
+          <div class="box_title">
+            <h3>수주(작업지시) 현황</h3>
+            <div class="diagram_wrap">
+              <div class="diagram">?</div>
+              <div class="diagram"><i class="far fa-star"></i></div>
+              <div class="diagram">X</div>
+            </div>
+          </div>
+
+          <div class="day">
+            <input type="date" id="start" name="start" value="2020-01-21">
+            <p>~</p>
+            <input type="date" id="end" name="end" value="2020-12-31">
+            <button>오늘</button>
+            <button>1주</button>
+            <button>금월</button>
+            <button>전월</button>
+            <button>1개월</button>
+            <button>3개월</button>
+            <button><!-- 상품 -->구분<i class="fas fa-caret-down"></i></button>
+            <button><!-- 일별 -->합계<i class="fas fa-caret-down"></i></button>
+            <button>상태<i class="fas fa-caret-down"></i></button>
+
+            <input type="text" id="manager" name="manager" placeholder="담당자" required>
+            <input type="text" id="order_number" name="order_number" placeholder="발주번호" required>
+            <input type="text" id="product_number" name="product_number" placeholder="상품번호" required>
+            <input type="text" id="product_name" name="product_name" placeholder="상품명" required>
+            <input type="text" id="color" name="color" placeholder="색상" required>
+            <input type="text" id="buyer" name="buyer" placeholder="발주처" required>
+            <input type="text" id="exhalation" name="exhalation" placeholder="호기" required>
+
+            <input type="checkbox" id="subtotal" name="subtotal">
+            <label for="subtotal">소계표시</label>
+            <button><i class="fas fa-search"></i><!-- 검색 --></button>
+          </div>
+
+          <div class="button_area">
+            <button><i class="fas fa-plus"></i><!-- 신규 -->등록</button>
+            <button><i class="fas fa-plus"></i>선택<!-- 생산 -->등록</button>
+            <button><i class="fas fa-save"></i>상태변경<!-- <i class="fas fa-caret-down"></i> --></button>
+            <button>H</button>
+            <button><i class="fas fa-print"></i>바코드출력</button>
+            <button><i class="fas fa-print"></i>Excel저장</button>
+            <button><i class="fas fa-print"></i>인쇄</button>
+            <button><i class="fas fa-plus"></i>노출항목설정</button>
+          </div>
+
+          <div class="main_table">
+            <table>
+              <tr>
+                <th><input type="checkbox" id="check" name="check"></th>
+                <th>번호</th>
+                <th>등록일시</th>
+                <th>상위발주번호</th>
+                <th>발주번호</th>
+                <th>발주처</th>
+                <th>담당부서</th>
+                <th>호기</th>
+                <th>상품구분</th>
+                <th>상품명</th>
+                <th>색상명</th>
+                <th>배색</th>
+                <th>규격</th>
+                <th>단위</th>
+                <th>수량</th>
+                <th>발주총량</th>
+                <th>작업총량</th>
+                <th>생산총량</th>
+                <th>남은총량</th>
+                <th>납기예정</th>
+                <th>담당자</th>
+                <th>상태</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>1</td>
+                <td>&#32;</td>
+                <td><a href="#">21-LE-211006</a></td>
+                <td><a href="#">21-LE-211006-1</a></td>
+                <td><a href="#">SANTIAN</a></td>
+                <td><a href="#">Mr.Quishibing</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">원단</a></td>
+                <td><a href="#">UP-1301 ABT 135G/YD X 53/54'</a></td>
+                <td><a href="#">버건디</a></td>
+                <td><a href="#">C/#B42A+42A+33+235</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">yd</a></td>
+                <td><a href="#">100</a></td>
+                <td><a href="#">5,000yd</a></td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><i class="fas fa-circle"></i>완료</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>2</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><a href="#">21-LE-211006-2</a></td>
+                <td><a href="#">SANTIAN</a></td>
+                <td>&#32;</td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">원단</a></td>
+                <td><a href="#">UP-1301 ABT 135G/YD X 53/54'</a></td>
+                <td><a href="#">블루</a></td>
+                <td><a href="#">C/#B42A+42A+33+235</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">yd</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">2,500yd</a></td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><i class="fas fa-square-full"></i>정지</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>3</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><a href="#">21-LE-211006-3</a></td>
+                <td><a href="#">SANTIAN</a></td>
+                <td>&#32;</td>
+                <td><a href="#">3</a></td>
+                <td><a href="#">원단</a></td>
+                <td><a href="#">UP-1301 ABT 135G/YD X 53/54'</a></td>
+                <td><a href="#">인디핑크</a></td>
+                <td><a href="#">C/#B42A+42A+33+235</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">yd</a></td>
+                <td><a href="#">90</a></td>
+                <td><a href="#">4,500yd</a></td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><i class="fas fa-square-full"></i>정지</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>4</td>
+                <td>&#32;</td>
+                <td><a href="#">21-LE-211007</a></td>
+                <td><a href="#">21-LE-211007-1</a></td>
+                <td><a href="#">CHEUCKLEE</a></td>
+                <td><a href="#">Ms.Denise</a></td>
+                <td><a href="#">7</a></td>
+                <td><a href="#">원단</a></td>
+                <td><a href="#">UP-1301 ABT 135G/YD X 53/54'</a></td>
+                <td><a href="#">아이보리</a></td>
+                <td><a href="#">C/#B42A+42A+33+235</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">yd</a></td>
+                <td><a href="#">80</a></td>
+                <td><a href="#">4,000yd</a></td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td><i class="fas fa-caret-right"></i>작업중</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>5</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>6</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn 경사용</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>1kg</td>
+                <td>cone</td>
+                <td>30</td>
+                <td>30kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>준비중</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>7</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>8</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>9</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn #T100</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>50</td>
+                <td>150kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>10</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn #T100</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>11</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn #T100</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="check" name="check"></td>
+                <td>12</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>원사</td>
+                <td>CO 80S CO 80s/3Ply 50D DYED Yarn 경사용</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>3kg</td>
+                <td>cone</td>
+                <td>80</td>
+                <td>240kg</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>&#32;</td>
+                <td>O대기</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="button_area2">
+            <button><i class="fas fa-plus"></i><!-- 신규 -->등록</button>
+            <button><i class="fas fa-plus"></i>선택<!-- 생산 -->등록</button>
+            <button><i class="fas fa-save"></i>상태변경<!-- <i class="fas fa-caret-down"></i> --></button>
+            <button>H</button>
+            <button><i class="fas fa-print"></i>바코드출력</button>
+            <button><i class="fas fa-print"></i>Excel저장</button>
+            <button><i class="fas fa-print"></i>인쇄</button>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>
