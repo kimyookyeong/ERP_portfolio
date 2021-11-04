@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12_상품등록</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="css/fiber_ERP_12_enrollment.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <div id="header_top">
+          <div class="title_wrap">
+            <p onclick="location.href='fiber_ERP_2_home/fiber_ERP_2_home.html'"><b>유경디자인</b><span>프리미엄서비스 이용중 (2021.02.22 ~ 2022.02.23)</span></p>
+          </div>
+          <div class="user_wrap">
+            <p>영업부 <b>홍길동(honggildong)</b>님 로그인 최종로그인 2020.10.24 14.23'</p>
+            <div class="button_wrap">
+              <button>내정보</button>
+              <button>로그아웃</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="header_middle">
+          <ul>
+            <li>회사관리</li>
+            <li>거래처</li>
+            <li onclick="location.href='fiber_ERP_6_status/fiber_ERP_6_status.html'">생산</li>
+            <li onclick="location.href='fiber_ERP_12_enrollment/fiber_ERP_12_enrollment.html'">상품</li>
+            <li onclick="location.href='fiber_ERP_28_order/fiber_ERP_28_order.html'">발주</li>
+            <li>입출고</li>
+            <li>서류함</li>
+            <li>정산</li>
+            <li>통계</li>
+          </ul>
+          <button>환경설정</button>
+        </div>
+    </header>
+      
+      <section>
+        <nav>
+            <div id="nav_title"><h1>상품관리</h1></div>
+            <ul>
+              <li>상품관리[전체]</li>
+              <li onclick="location.href='fiber_ERP_12_enrollment/fiber_ERP_12_enrollment.html'">상품관리[원사]</li>
+              <li>상품관리[빔]</li>
+              <li>상품관리[원단]</li>
+              <li>상품관리[완제품]</li>
+              <li>상품관리[기타상품]</li>
+              <li>&#32;</li>
+            </ul>
+        </nav>
+
+        <div id="main">
+          <div class="box_title">
+            <h3>상품등록/보기/수정_popup - 원사</h3>
+            <div class="diagram_wrap">
+              <div class="diagram">?</div>
+              <div class="diagram"><i class="far fa-star"></i></div>
+              <div class="diagram">X</div>
+            </div>
+          </div>
+
+          <div class="button_area">
+            <button><span>X</span>삭제</button>
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X닫기</button>
+            <button><i class="fas fa-print"></i>선택발주등록</button>
+            <button><i class="fas fa-print"></i>상담내역</button>
+            <button>H</button>
+            <button><i class="fas fa-print"></i>소요량 시뮬레이션</button>
+            <button><i class="fas fa-print"></i>원가 시뮬레이션</button>
+            <button><i class="fas fa-print"></i>승인요청</button>
+          </div>
+
+          <div class="main_wrap">
+            <div class="left_container">
+              <table>
+                <tr>
+                  <th><u>Item 5</u></th><td>&#32;</td>
+                </tr>
+                <tr>
+                  <th><u>Item P</u></th><td>&#32;</td>
+                </tr>
+                <tr>
+                  <th>Yarn SPEC</th><td>P.E 150D/48F 2H</td>
+                </tr>
+                <tr>
+                  <th>Composition</th><td>100% P.E</td>
+                </tr>
+                <tr>
+                  <th>TPM</th><td>DTY / (S600 + Z 800)</td>
+                </tr>
+                <tr>
+                  <th>Grade</th><td>AA</td>
+                </tr>
+                <tr>
+                  <th>Finishing</th><td>DYED YARN</td>
+                </tr>
+                <tr>
+                  <th><u>Description</u></th><td>&#32;</td>
+                </tr>
+              </table>
+
+              <div class="fabric_img"><img src="img/fabric.jfif"></div>
+              <div class="img_bottom">
+                <i class="fas fa-circle"></i> <i class="fas fa-circle"></i> <i class="fas fa-circle"></i> <i class="fas fa-circle"></i>
+                <i class="far fa-circle"></i> <i class="far fa-circle"></i> <i class="far fa-circle"></i> <i class="far fa-circle"></i> <i class="far fa-circle"></i>
+                <button><span><b>+</b></span>사진등록</button>
+              </div>
+              <div class="file_btn">
+                <button>EP</button><button>WEA</button><button>JC</button><button>CGS</button><button>CGS</button><button><b>UPT</b></button>
+                <button>KKW</button><button>GIF</button><button>jpg</button><button><b>PDF</b></button><!-- <button>&#32;</button> --><button class="red">more</button>
+              </div>
+              <button class="admin">파일관리</button>
+
+              <table class="history">
+                <tr>
+                  <th>Design History</th>
+                </tr>
+                <tr>
+                  <td><a href="#">샘플 2302-22214-324</a> 복사등록</td>
+                </tr>
+                <tr>
+                  <td>&#32;</td>
+                </tr>
+                <tr>
+                  <td>&#32;</td>
+                </tr>
+                <tr>
+                  <td>&#32;</td>
+                </tr>
+                <tr>
+                  <td>&#32;</td>
+                </tr>
+                <tr>
+                  <td>...더보기</td>
+                </tr>
+              </table>
+            </div>
+            <div class="right_container">
+              <div class="production_title">
+                <h3>기본정보</h3>
+              </div>
+              <table>
+                <tr>
+                  <th>상품번호</th><td>자동증가</td>
+                  <th>관리코드</th><td>&#32;</td>
+                  <th>바코드</th><td>자동생성</td>
+                  <th>등록상태</th><td>임시 <i class="fas fa-caret-down"></i></td>
+                </tr>
+                <tr>
+                  <th>상품구분</th><td>원사</td>
+                  <th>상품분류</th><td>원사상품분류선택 <i class="fas fa-caret-down"></i></td>
+                  <th>상품그룹</th><td>원사상품그룹선택 <i class="fas fa-caret-down"></i></td>
+                  <th>판매상태</th><td>중지 <i class="fas fa-caret-down"></i> [판매중][일시품절][품절]</td>
+                </tr>
+                <tr>
+                  <th>*상품명</th><td>[상품번호] + [원사분류] + [데니어] + D 용도 #별칭</td>
+                  <th>노출상품명</th><td>&#32;</td>
+                </tr>
+                <tr>
+                  <th>모델명</th><td>&#32;<button><i class="fas fa-search"></i></button></td>
+                  <th>브랜드</th><td>&#32;<button><i class="fas fa-search"></i></button></td>
+                  <th>제조사</th><td>&#32;<button><i class="fas fa-search"></i></button></td>
+                  <th>원산지</th><td>&#32;<button><i class="fas fa-search"></i></button></td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>주거래처</th>
+                  <th>규격</th>
+                  <th>규격단위</th>
+                  <th>포장단위</th>
+                  <th>최소판매수량</th>
+                  <th>최소발주Color</th>
+                  <th>생산원가</th>
+                  <th>매입가</th>
+                  <th>소비자가</th>
+                  <th>판매가</th>
+                  <th>도매판매가</th>
+                  <th>통화단위</th>
+                </tr>
+                <tr>
+                  <td>&#32;<button><i class="fas fa-search"></i></button></td>
+                  <td>숫자</td>
+                  <td>&#32;<i class="fas fa-caret-down"></i></td>
+                  <td>&#32;<i class="fas fa-caret-down"></i></td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>숫자</td>
+                  <td>KRW <i class="fas fa-caret-down"></i></td>
+                </tr>
+              </table>
+
+              <div class="red_border">
+                <div class="production_title">
+                  <h3>특정정보</h3>
+                </div>
+                <table>
+                  <tr>
+                    <th>원사분류</th>
+                    <th>데니어</th>
+                    <th>Filament</th>
+                    <th>TPM (S)</th>
+                    <th>TPM (Z)</th>
+                    <th>FINISHING</th>
+                  </tr>
+                  <tr>
+                    <td>P.E150</td>
+                    <td>150</td>
+                    <td>48F 2H</td>
+                    <td>DTY</td>
+                    <td>&#32;</td>
+                    <td>DYED YARN</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <th>등급</th>
+                    <th>혼용률 (%)</th>
+                    <th>별칭</th>
+                    <th>용도</th>
+                  </tr>
+                  <tr>
+                    <td>AA <button><i class="fas fa-caret-down"></i></button></td>
+                    <td>P.E 100%</td>
+                    <td>T <button>중복확인</button></td>
+                    <td>위사</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="production_title">
+                <h3>가공정보 요약</h3>
+              </div>
+              <table>
+                <tr>
+                    <th>가공분류</th>
+                    <th>가공방법</th>
+                    <th>가공분류</th>
+                    <th>가공방법</th>
+                    <th>가공분류</th>
+                    <th>가공방법</th>
+                    <th>가공분류</th>
+                    <th>가공방법</th>
+                </tr>
+                <tr>
+                  <td>염색 <i class="fas fa-caret-down"></i></td>
+                  <td>분산염색 <i class="fas fa-caret-down"></i></td>
+                  <td>와인딩 <i class="fas fa-caret-down"></i></td>
+                  <td>1.5KG / CONE <i class="fas fa-caret-down"></i></td>
+                  <td>가공분류선택 <i class="fas fa-caret-down"></i></td>
+                  <td>가공방법선택 <i class="fas fa-caret-down"></i></td>
+                  <td>가공분류선택 <i class="fas fa-caret-down"></i></td>
+                  <td>가공방법선택 <i class="fas fa-caret-down"></i></td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <th>품질 기준사항</th>
+                  <th>MEMO (가공주의)</th>
+                  <th>MEMO (포장 및 기타사항)</th>
+                </tr>
+                <tr>
+                  <td>AZO 염료금지 & PH 4.0~7.5 이하</td>
+                  <td>샘플 작업과 동일하게 해주세요</td>
+                  <td>포장 시 비닐 두겹으로 처리해주세요.</td>
+                </tr>
+              </table>
+              <button class="save"><i class="fas fa-save"></i>저장</button>
+              <div class="production_title">
+                <h3>배색정보 [색상옵션]</h3>
+              </div>
+              <div class="production_title">
+                <h3>옵션 및 기초재고</h3>
+              </div>
+              <div class="production_title">
+                <h3>발주시나리오</h3>
+              </div>
+              <div class="production_title">
+                <h3>상품고시정보</h3>
+              </div>
+              <div class="production_title">
+                <h3>FDS정보</h3>
+              </div>
+              <div class="production_title">
+                <h3>배송비 정책</h3>
+              </div>
+              <div class="production_title">
+                <h3>상품소개</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="button_area2">
+            <button><span>X</span>삭제</button>
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X닫기</button>
+            <button><i class="fas fa-print"></i>선택발주등록</button>
+            <button><i class="fas fa-print"></i>상담내역</button>
+            <button>H</button>
+            <button><i class="fas fa-print"></i>소요량 시뮬레이션</button>
+            <button><i class="fas fa-print"></i>원가 시뮬레이션</button>
+            <button><i class="fas fa-print"></i>승인요청</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>저장[샘플]</p>
+        <p>저장[디자인]</p>
+        <p>다른이름으로 저장</p>
+
+        <div class="button_area3">
+          <!-- <button>상태 <i class="fas fa-caret-down"></i></button>
+          <button><i class="fas fa-search"></i>검색</button>
+          <button>+ 추가</button>
+          <button><i class="fas fa-print"></i>출력</button>
+          <button>수정</button>
+          <button>X 삭제</button>
+          <button>H</button>
+          <button>+ 신규등록</button> -->
+
+          <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+          <button>Clear</button>
+          <button>X 닫기</button>
+          <button>수정</button>
+          <button>X 삭제</button>
+          <button>H</button>
+          <button>+ 신규</button>
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </footer>
+  </body>
+</html>
