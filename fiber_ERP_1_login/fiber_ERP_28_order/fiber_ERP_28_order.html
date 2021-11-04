@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>28_발주서작성</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="css/fiber_ERP_28_order.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <div id="header_top">
+          <div class="title_wrap">
+            <p onclick="location.href='fiber_ERP_2_home/fiber_ERP_2_home.html'"><b>유경디자인</b><span>프리미엄서비스 이용중 (2021.02.22 ~ 2022.02.23)</span></p>
+          </div>
+          <div class="user_wrap">
+            <p>영업부 <b>홍길동(honggildong)</b>님 로그인 최종로그인 2020.10.24 14.23'</p>
+            <div class="button_wrap">
+              <button>내정보</button>
+              <button>로그아웃</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="header_middle">
+          <ul>
+            <li>회사관리</li>
+            <li>거래처</li>
+            <li onclick="location.href='fiber_ERP_6_status/fiber_ERP_6_status.html'">생산</li>
+            <li onclick="location.href='fiber_ERP_12_enrollment/fiber_ERP_12_enrollment.html'">상품</li>
+            <li onclick="location.href='fiber_ERP_28_order/fiber_ERP_28_order.html'">발주</li>
+            <li>입출고</li>
+            <li>서류함</li>
+            <li>정산</li>
+            <li>통계</li>
+          </ul>
+          <button>환경설정</button>
+        </div>
+    </header>
+      
+    <section>
+        <nav>
+            <div id="nav_title"><h1>발주관리</h1></div>
+            <ul>
+              <li>수주현황</li>
+              <li onclick="location.href='fiber_ERP_28_order/fiber_ERP_28_order.html'">발주현황</li>
+              <li>장바구니</li>
+              <li>&#32;</li>
+            </ul>
+        </nav>
+
+        <div id="main">
+          <div class="box_title">
+            <h3>발주서작성</h3>
+            <div class="diagram_wrap">
+              <div class="diagram">?</div>
+              <div class="diagram"><i class="far fa-star"></i></div>
+              <div class="diagram">X</div>
+            </div>
+          </div>
+
+          <div class="button_area">
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X닫기</button>
+            <button>H</button>
+          </div>
+
+          <div class="tap_menu">
+              <ul>
+                <li>기본정보</li>
+                <li>S/C</li>
+                <li>재고현황</li>
+                <li>생산현황</li>
+                <li>입출고현황</li>
+                <li>정산현황</li>
+
+                <li>서류함</li>
+                <li>상담/메모</li>
+              </ul>
+          </div>
+
+          <div class="main_wrap">
+              <h1>발주서 기본정보</h1>
+
+              <table>
+                <tr>
+                  <th>발주서명</th><td>제직발주서</td><td><input type="checkbox" id="check" name="check">발주서 <input type="checkbox" id="check" name="check">수주서</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>머릿글</th><td>&#32;</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>구분</th>
+                  <th>회사명</th>
+                  <th>담당부서</th>
+                  <th>담당자</th>
+                  <th>연락처</th>
+                  <th>주소</th>
+                </tr>
+                <tr>
+                  <td>발신</td>
+                  <td>유경 디자인</td>
+                  <td>영업부</td>
+                  <td>김 구매 차장</td>
+                  <td>010-1234-5678</td>
+                  <td>서울 동대문구 왕산로 51</td>
+                </tr>
+                <tr>
+                    <td>수신</td>
+                    <td>00 섬유</td>
+                    <td>영업부</td>
+                    <td>김 기업 과장</td>
+                    <td>010-4321-9876</td>
+                    <td>경기 안양시 만안구 덕천로48번길 19</td>
+                  </tr>
+                  <tr>
+                    <td>VENDER</td>
+                    <td>하나로코리아</td>
+                    <td>유통사업부</td>
+                    <td>김하나</td>
+                    <td>010-3333-4444</td>
+                    <td>&#32;</td>
+                  </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <th>P/O번호</th><td>하위발주서-> 상위발주서의 P/O번호</td><th>발주구분</th><td>제직발주</td><th>상태</th><td>대기 <i class="fas fa-caret-down"></i></td>
+                </tr>
+                <tr>
+                  <th>발주번호</th><td>자동생성</td><th>접수(등록) 일시</th><td>21-10-15</td><th>접수(등록) 방법</th><td>수주서 메일</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                    <th>결제방법</th><td>T/T (현금) <i class="fas fa-caret-down"></i></td><th>배송방법</th><td>경동택배 상암지점<i class="fas fa-caret-down"></i></td><th>납기요청일</th><td>21-11-25</td>
+                </tr>
+                <tr>
+                    <th>처리부서</th><td>영업부</td><th>담당자</th><td>김 판매</td><th>승인자</th><td>O</td>
+                </tr>
+                <tr>
+                    <th>적요</th><td>&#32;</td>
+                </tr>
+              </table>
+
+              <div class="production_title">
+                <h3>발주상품</h3>
+              </div>
+
+              <table>
+                <tr>
+                  <th><input type="checkbox" id="check" name="check"></th>
+                  <th>상품구분</th>
+                  <th>가공분류</th>
+                  <th>가공방법</th>
+                  <th>그룹(분류)</th>
+                  <th>상품명</th>
+                  <th>색상명</th>
+                  <th>배색</th>
+                  <th>규격</th>
+                  <th>단위</th>
+                  <th>수량</th>
+                  <th>총량</th>
+                  <th>단가</th>
+                  <th>금액</th>
+                  <th>후가공1</th>
+                  <th>후가공2</th>
+                  <th>후가공3</th>
+                  <th>입고처</th>
+                  <th>&#32;</th>
+                  <th>적요</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="check" name="check"></td>
+                  <td>원단</td>
+                  <td>임직</td>
+                  <td>제직</td>
+                  <td>자카드</td>
+                  <td>UP-1301 <button><i class="fas fa-search"></i></button></td>
+                  <td>#Mel-1</td>
+                  <td>#253</td>
+                  <td>50 <i class="fas fa-caret-down"></i></td>
+                  <td>YD<i class="fas fa-caret-down"></i></td>
+                  <td>300</td>
+                  <td>1,500yd</td>
+                  <td>5500</td>
+                  <td>1,650,000</td>
+                  <td>텐터</td>
+                  <td>&#32;</td>
+                  <td>&#32;</td>
+                  <td>유경 사무실</td>
+                  <td>&#32;</td>
+                  <td>&#32;</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="check" name="check"></td>
+                    <td>원단</td>
+                    <td>임직</td>
+                    <td>제직</td>
+                    <td>자카드</td>
+                    <td>UP-1301 <button><i class="fas fa-search"></i></button></td>
+                    <td>#Mel-2</td>
+                    <td>#254</td>
+                    <td>50 <i class="fas fa-caret-down"></i></td>
+                    <td>YD<i class="fas fa-caret-down"></i></td>
+                    <td>300</td>
+                    <td>1,500yd</td>
+                    <td>5500</td>
+                    <td>1,650,000</td>
+                    <td>텐터</td>
+                    <td>&#32;</td>
+                    <td>&#32;</td>
+                    <td>유경 사무실</td>
+                    <td>&#32;</td>
+                    <td>&#32;</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" id="check" name="check"></td>
+                    <td>원단</td>
+                    <td>임직</td>
+                    <td>제직</td>
+                    <td>자카드</td>
+                    <td>UP-1301 <button><i class="fas fa-search"></i></button></td>
+                    <td>#Mel-3</td>
+                    <td>#255</td>
+                    <td>50 <i class="fas fa-caret-down"></i></td>
+                    <td>YD<i class="fas fa-caret-down"></i></td>
+                    <td>300</td>
+                    <td>1,500yd</td>
+                    <td>5500</td>
+                    <td>1,650,000</td>
+                    <td>텐터</td>
+                    <td>&#32;</td>
+                    <td>&#32;</td>
+                    <td>유경 사무실</td>
+                    <td>&#32;</td>
+                    <td>&#32;</td>
+                  </tr>
+              </table>
+
+              <h2>발주 상품구분에 따라 리스트 표시 형식 상이</h2>
+          </div>
+
+          <div class="button_area2">
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X닫기</button>
+            <button>H</button>
+
+            <button>디자인정보</button>
+            <button>빔정보</button>
+            <button>발주서출력</button>
+            <button>S/C 출력</button>
+          </div>
+
+          <div class="tap_menu2">
+            <ul>
+              <li>기본정보</li>
+              <li>S/C</li>
+              <li>재고현황</li>
+              <li>생산현황</li>
+              <li>입출고현황</li>
+              <li>정산현황</li>
+
+              <li>서류함</li>
+              <li>상담/메모</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <footer>
+        <div class="button_area3">
+            <!-- <button>상태 <i class="fas fa-caret-down"></i></button>
+            <button><i class="fas fa-search"></i>검색</button>
+            <button>+ 추가</button>
+            <button><i class="fas fa-print"></i>출력</button>
+            <button>수정</button>
+            <button>X 삭제</button>
+            <button>H</button>
+            <button>+ 신규등록</button> -->
+
+            <button><i class="fas fa-save"></i>저장<i class="fas fa-caret-down"></i></button>
+            <button>Clear</button>
+            <button>X 닫기</button>
+            <button>수정</button>
+            <button>X 삭제</button>
+            <button>H</button>
+            <button>+ 신규</button>
+            <button><i class="fas fa-search"></i></button>
+        </div>
+      </footer>
+  </body>
+</html>
